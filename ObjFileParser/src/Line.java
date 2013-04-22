@@ -37,8 +37,8 @@ public class Line {
 	
 	public String printLineCoordinates(){
 		return String.format("%d,%d",
-				startVertex,
-				endVertex
+				startVertex-1,
+				endVertex-1
 				);
 	}
 	
