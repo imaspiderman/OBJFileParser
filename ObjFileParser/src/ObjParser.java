@@ -105,6 +105,7 @@ public class ObjParser {
 						Line l = new Line(v1, v2);
 						
 						boolean add = true;
+						
 						for(int j=0; j<lines.size(); j++){
 							if(lines.get(j).compare(l)) {
 								add = false;
@@ -119,11 +120,12 @@ public class ObjParser {
 						//The last vertex of a face connects to the first vertex
 						//with a line so this creates that final line
 						if(i==pieces.length-1){
-							v2 = Integer.parseInt((pieces[i].indexOf("/")>-1)?(pieces[i].split("/")[0]):(pieces[i]));
+							v2 = Integer.parseInt((pieces[i].indexOf("/")>-1)?(pieces[1].split("/")[0]):(pieces[1]));
 							
 							l = new Line(v1, v2);
 							
 							add = true;
+							
 							for(int j=0; j<lines.size(); j++){
 								if(lines.get(j).compare(l)) {
 									add = false;
